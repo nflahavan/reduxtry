@@ -9,16 +9,18 @@
 import Foundation
 
 class Store<State> {
-  var state: State
-  var viewReducer: AnyViewReducer<State>
+  private var state: State
+  private var viewReducer: AnyViewReducer<State>
+  private var viewRefresh: (State) -> Void
 
-  init(initialState: State, viewReducer: AnyViewReducer<State>) {
+  init(initialState: State, viewReducer: AnyViewReducer<State>, viewRefresh: @escaping (State) -> Void) {
     self.state = initialState
     self.viewReducer = viewReducer
+    self.viewRefresh = viewRefresh
   }
 
   func getstate() -> State {
-    return state
+    return self.state
   }
 
   func dispatch(action: ActionProtocol) {
@@ -29,6 +31,6 @@ class Store<State> {
     // if newState == state { don't do anything } else {
     self.state = newState
     // notify watchers
-    // notify viewController or maybe call VC's refresh method? tbd
+    self.viewRefresh(self.state)
   }
 }

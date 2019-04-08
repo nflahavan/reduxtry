@@ -47,8 +47,4 @@ final class AnyViewReducer<State>: ViewReducerProtocol {
   func reduce(state: State, action: ActionProtocol) -> State {
     return box.reduce(state: state, action: action)
   }
-
-  //  func validate(formValue: FormValue) -> Bool {
-  //    return box.validate(formValue: formValue)
-  //  }
 }

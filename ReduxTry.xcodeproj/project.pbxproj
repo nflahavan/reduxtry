@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B975A2E2225816A3009DD996 /* ViewReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B975A2E1225816A3009DD996 /* ViewReducer.swift */; };
+		B975A2EB2258199A009DD996 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B975A2E92258199A009DD996 /* RootViewController.swift */; };
+		B975A2EC2258199A009DD996 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B975A2EA2258199A009DD996 /* RootViewController.xib */; };
+		B975A2F222581B20009DD996 /* IncrementAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B975A2F122581B20009DD996 /* IncrementAction.swift */; };
+		B975A2F422581D86009DD996 /* ExampleViewReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B975A2F322581D86009DD996 /* ExampleViewReducer.swift */; };
+		B975A2F622582C72009DD996 /* BackgroundColorAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B975A2F522582C72009DD996 /* BackgroundColorAction.swift */; };
+		B975A2F922582C9B009DD996 /* ExampleViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B975A2F822582C9B009DD996 /* ExampleViewState.swift */; };
 		B9CBD195224EF57B00055C42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CBD194224EF57B00055C42 /* AppDelegate.swift */; };
-		B9CBD197224EF57B00055C42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CBD196224EF57B00055C42 /* ViewController.swift */; };
-		B9CBD19A224EF57B00055C42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9CBD198224EF57B00055C42 /* Main.storyboard */; };
 		B9CBD19C224EF57D00055C42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9CBD19B224EF57D00055C42 /* Assets.xcassets */; };
 		B9CBD19F224EF57D00055C42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9CBD19D224EF57D00055C42 /* LaunchScreen.storyboard */; };
 		B9CBD1A7224EF59100055C42 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CBD1A6224EF59100055C42 /* Store.swift */; };
@@ -23,10 +28,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B975A2E1225816A3009DD996 /* ViewReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewReducer.swift; sourceTree = "<group>"; };
+		B975A2E92258199A009DD996 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		B975A2EA2258199A009DD996 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		B975A2F122581B20009DD996 /* IncrementAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncrementAction.swift; sourceTree = "<group>"; };
+		B975A2F322581D86009DD996 /* ExampleViewReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewReducer.swift; sourceTree = "<group>"; };
+		B975A2F522582C72009DD996 /* BackgroundColorAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColorAction.swift; sourceTree = "<group>"; };
+		B975A2F822582C9B009DD996 /* ExampleViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewState.swift; sourceTree = "<group>"; };
 		B9CBD191224EF57B00055C42 /* ReduxTry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxTry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9CBD194224EF57B00055C42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B9CBD196224EF57B00055C42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B9CBD199224EF57B00055C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B9CBD19B224EF57D00055C42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9CBD19E224EF57D00055C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B9CBD1A0224EF57D00055C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +61,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B975A2ED22581AEB009DD996 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				B975A2EF22581B03009DD996 /* State */,
+				B975A2EE22581AF9009DD996 /* View */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		B975A2EE22581AF9009DD996 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B975A2E92258199A009DD996 /* RootViewController.swift */,
+				B975A2EA2258199A009DD996 /* RootViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B975A2EF22581B03009DD996 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				B975A2F022581B0A009DD996 /* Actions */,
+				B975A2F322581D86009DD996 /* ExampleViewReducer.swift */,
+				B975A2F822582C9B009DD996 /* ExampleViewState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		B975A2F022581B0A009DD996 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				B975A2F122581B20009DD996 /* IncrementAction.swift */,
+				B975A2F522582C72009DD996 /* BackgroundColorAction.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
 		B9CBD188224EF57A00055C42 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				B9CBD1A0224EF57D00055C42 /* Info.plist */,
+				B975A2ED22581AEB009DD996 /* Example */,
 				B9CBD1B0224EF6B600055C42 /* Customer */,
 				B9CBD1AF224EF69A00055C42 /* ReduxBoilerplate */,
 				B9CBD1B5224EF6F900055C42 /* Domain */,
@@ -83,8 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				B9CBD194224EF57B00055C42 /* AppDelegate.swift */,
-				B9CBD196224EF57B00055C42 /* ViewController.swift */,
-				B9CBD198224EF57B00055C42 /* Main.storyboard */,
 				B9CBD19B224EF57D00055C42 /* Assets.xcassets */,
 				B9CBD19D224EF57D00055C42 /* LaunchScreen.storyboard */,
 			);
@@ -96,6 +142,7 @@
 			children = (
 				B9CBD1A6224EF59100055C42 /* Store.swift */,
 				B9CBD1A9224EF5E000055C42 /* ViewReducerProtocol.swift */,
+				B975A2E1225816A3009DD996 /* ViewReducer.swift */,
 				B9CBD1AB224EF62800055C42 /* ActionProtocol.swift */,
 				B9CBD1AD224EF67400055C42 /* ActionReducerProtocol.swift */,
 			);
@@ -180,7 +227,7 @@
 			files = (
 				B9CBD19F224EF57D00055C42 /* LaunchScreen.storyboard in Resources */,
 				B9CBD19C224EF57D00055C42 /* Assets.xcassets in Resources */,
-				B9CBD19A224EF57B00055C42 /* Main.storyboard in Resources */,
+				B975A2EC2258199A009DD996 /* RootViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,28 +240,25 @@
 			files = (
 				B9CBD1A7224EF59100055C42 /* Store.swift in Sources */,
 				B9CBD1AA224EF5E000055C42 /* ViewReducerProtocol.swift in Sources */,
+				B975A2EB2258199A009DD996 /* RootViewController.swift in Sources */,
+				B975A2F222581B20009DD996 /* IncrementAction.swift in Sources */,
 				B9CBD1B2224EF6D000055C42 /* SaveAction.swift in Sources */,
+				B975A2E2225816A3009DD996 /* ViewReducer.swift in Sources */,
 				B9CBD1B4224EF6EA00055C42 /* Customer.swift in Sources */,
 				B9CBD1AC224EF62800055C42 /* ActionProtocol.swift in Sources */,
+				B975A2F422581D86009DD996 /* ExampleViewReducer.swift in Sources */,
 				B9CBD1B7224EF77800055C42 /* CustomerViewState.swift in Sources */,
-				B9CBD197224EF57B00055C42 /* ViewController.swift in Sources */,
+				B975A2F922582C9B009DD996 /* ExampleViewState.swift in Sources */,
 				B9CBD1AE224EF67400055C42 /* ActionReducerProtocol.swift in Sources */,
 				B9CBD195224EF57B00055C42 /* AppDelegate.swift in Sources */,
 				B9CBD1B9224EF79B00055C42 /* CustomerViewReducer.swift in Sources */,
+				B975A2F622582C72009DD996 /* BackgroundColorAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B9CBD198224EF57B00055C42 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B9CBD199224EF57B00055C42 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B9CBD19D224EF57D00055C42 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

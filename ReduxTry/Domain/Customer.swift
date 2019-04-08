@@ -11,5 +11,4 @@ import Foundation
 struct Customer {
   var firstName: String
   var lastName: String
-
 }

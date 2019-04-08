@@ -14,5 +14,5 @@ protocol ActionProtocol {
 
 struct Action<T>: ActionProtocol {
   let type: String
-  let payload: T
+  let payload: T?
 }
