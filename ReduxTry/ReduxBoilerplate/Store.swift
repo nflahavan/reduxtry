@@ -23,9 +23,10 @@ class Store<State> {
     return self.state
   }
 
-  func dispatch(action: ActionProtocol) {
+  func dispatch(action: Action) {
     // Add to queue
     // process queue async (all on one thread right now)
+    print("dispatching \(action.type)")
     let newState = viewReducer.reduce(state: self.state, action: action)
     // compare
     // if newState == state { don't do anything } else {

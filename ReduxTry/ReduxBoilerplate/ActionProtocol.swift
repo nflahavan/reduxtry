@@ -8,11 +8,17 @@
 
 import Foundation
 
-protocol ActionProtocol {
-  var type: String { get }
-}
+protocol PayloadProtocol {}
 
-struct Action<T>: ActionProtocol {
+extension Int: PayloadProtocol {}
+//...
+
+//protocol ActionProtocol {
+//  var type: String { get }
+//  var payload: PayloadProtocol? { get }
+//}
+
+struct Action {
   let type: String
-  let payload: T?
+  let payload: PayloadProtocol?
 }

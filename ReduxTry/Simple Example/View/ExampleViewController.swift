@@ -1,5 +1,5 @@
 //
-//  RootViewController.swift
+//  ExampleViewController.swift
 //  ReduxTry
 //
 //  Created by NFlahavan on 4/5/19.
@@ -8,21 +8,24 @@
 
 import UIKit
 
-class RootViewController: UIViewController {
+class ExampleViewController: UIViewController {
   @IBOutlet weak var buttonLabel: UILabel!
   @IBOutlet weak var button: UIButton!
+  @IBOutlet weak var incrementBy: UIButton!
 
-  private var viewReducer: ViewReducer<Int>
+  private var viewReducer: ViewReducer<Int>!
   private var store: Store<Int>!
   private var incrementAction: IncrementAction!
+  private var incrementByAction: IncrementByAction!
 
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-    viewReducer = ExampleViewReducer()
-
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 
+    viewReducer = ExampleViewReducer()
     store = Store(initialState: 0, viewReducer: AnyViewReducer(viewReducer), viewRefresh: refresh(count: ))
+
     incrementAction = IncrementAction(storeDispatchFunc: store.dispatch(action:), viewReducer: viewReducer)
+    incrementByAction = IncrementByAction(storeDispatchFunc: store.dispatch(action:), viewReducer: viewReducer)
   }
 
   required init?(coder aDecoder: NSCoder) {
@@ -33,6 +36,11 @@ class RootViewController: UIViewController {
     incrementAction.dispatch()
   }
 
+  @IBAction func incrementByButtonTouched(_ sender: Any) {
+    print("incrementByButtonTouched")
+    incrementByAction.dispatch(payload: 2)
+  }
+  
   func refresh(count: Int) {
     buttonLabel.text = "button pressed \(count) times."
   }

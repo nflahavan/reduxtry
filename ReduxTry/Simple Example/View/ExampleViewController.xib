@@ -10,10 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RootViewController" customModule="ReduxTry" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExampleViewController" customModule="ReduxTry" customModuleProvider="target">
             <connections>
                 <outlet property="button" destination="Pko-0n-9xP" id="tiA-BK-lmb"/>
                 <outlet property="buttonLabel" destination="wTq-4F-GJV" id="gQe-qQ-rXh"/>
+                <outlet property="incrementBy" destination="dWW-tE-QbL" id="G0d-iE-ljI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -35,16 +36,25 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWW-tE-QbL">
+                    <rect key="frame" x="161.5" y="493" width="91" height="30"/>
+                    <state key="normal" title="Increment By"/>
+                    <connections>
+                        <action selector="incrementByButtonTouched:" destination="-1" eventType="touchUpInside" id="Tq1-cg-sNd"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="dWW-tE-QbL" firstAttribute="top" secondItem="Pko-0n-9xP" secondAttribute="bottom" constant="25" id="D1f-2h-8db"/>
                 <constraint firstItem="wTq-4F-GJV" firstAttribute="centerX" secondItem="Pko-0n-9xP" secondAttribute="centerX" id="F2F-1i-z6E"/>
                 <constraint firstItem="Pko-0n-9xP" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="HGd-Fc-PAC"/>
                 <constraint firstItem="Pko-0n-9xP" firstAttribute="top" secondItem="wTq-4F-GJV" secondAttribute="bottom" constant="13" id="MFT-zJ-MZa"/>
                 <constraint firstItem="Pko-0n-9xP" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="hVf-fJ-mKj"/>
+                <constraint firstItem="dWW-tE-QbL" firstAttribute="centerX" secondItem="Pko-0n-9xP" secondAttribute="centerX" id="yXs-yd-bWR"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="400" y="-22"/>
+            <point key="canvasLocation" x="-400" y="-26"/>
         </view>
     </objects>
 </document>

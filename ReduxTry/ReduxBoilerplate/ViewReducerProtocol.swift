@@ -10,7 +10,7 @@ import Foundation
 
 protocol ViewReducerProtocol {
   associatedtype State
-  func reduce(state: State, action: ActionProtocol) -> State
+  func reduce(state: State, action: Action) -> State
 }
 
 private class _AnyViewReducer<State>: ViewReducerProtocol {
@@ -20,7 +20,7 @@ private class _AnyViewReducer<State>: ViewReducerProtocol {
     }
   }
 
-  func reduce(state: State, action: ActionProtocol) -> State {
+  func reduce(state: State, action: Action) -> State {
     fatalError()
   }
 }
@@ -32,7 +32,7 @@ private final class _AnyViewReducerBox<Concrete: ViewReducerProtocol>: _AnyViewR
     self.concrete = concrete
   }
 
-  override func reduce(state: Concrete.State, action: ActionProtocol) -> Concrete.State {
+  override func reduce(state: Concrete.State, action: Action) -> Concrete.State {
     return concrete.reduce(state: state, action: action)
   }
 }
@@ -44,7 +44,7 @@ final class AnyViewReducer<State>: ViewReducerProtocol {
     box = _AnyViewReducerBox(concrete)
   }
 
-  func reduce(state: State, action: ActionProtocol) -> State {
+  func reduce(state: State, action: Action) -> State {
     return box.reduce(state: state, action: action)
   }
 }
