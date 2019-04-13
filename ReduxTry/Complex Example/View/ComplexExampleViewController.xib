@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ComplexExampleViewController" customModule="ReduxTry" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="uJP-vY-iPK" id="IH0-oZ-Kyi"/>
+                <outlet property="buttonLabel" destination="V87-WU-Izv" id="oli-6m-eXB"/>
+                <outlet property="customerSegmentedControl" destination="sp7-4p-kFx" id="mEc-1i-HuQ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wiq-9m-lZo">
+                    <rect key="frame" x="184" y="438" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="buttonTouched:" destination="-1" eventType="touchUpInside" id="XPc-ZU-n6Y"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Touch the Button!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V87-WU-Izv">
+                    <rect key="frame" x="139" y="377" width="136.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sp7-4p-kFx">
+                    <rect key="frame" x="129" y="576" width="121" height="29"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <segments>
+                        <segment title="Bob"/>
+                        <segment title="Jill"/>
+                    </segments>
+                    <connections>
+                        <action selector="customerSegmentedControlValueChanged:" destination="-1" eventType="valueChanged" id="FCh-Cx-yJd"/>
+                    </connections>
+                </segmentedControl>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="wiq-9m-lZo" firstAttribute="top" secondItem="V87-WU-Izv" secondAttribute="bottom" constant="40" id="MOm-LK-Wgu"/>
+                <constraint firstItem="wiq-9m-lZo" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="ggK-gd-Vld"/>
+                <constraint firstItem="wiq-9m-lZo" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="tdl-3h-45Z"/>
+                <constraint firstItem="V87-WU-Izv" firstAttribute="centerX" secondItem="wiq-9m-lZo" secondAttribute="centerX" id="uJP-vY-iPK"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-310" y="32"/>
+        </view>
+    </objects>
+</document>

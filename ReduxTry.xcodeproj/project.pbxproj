@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B926084222615815005667D4 /* ComplexExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B926084022615815005667D4 /* ComplexExampleViewController.swift */; };
+		B926084322615815005667D4 /* ComplexExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B926084122615815005667D4 /* ComplexExampleViewController.xib */; };
+		B926084822615841005667D4 /* ComplexViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B926084722615841005667D4 /* ComplexViewState.swift */; };
+		B926084A226158D0005667D4 /* ComplexIncrementAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9260849226158D0005667D4 /* ComplexIncrementAction.swift */; };
+		B926085022615E6E005667D4 /* SwitchCustomerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B926084F22615E6E005667D4 /* SwitchCustomerAction.swift */; };
 		B975A2E2225816A3009DD996 /* ViewReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B975A2E1225816A3009DD996 /* ViewReducer.swift */; };
 		B975A2EB2258199A009DD996 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B975A2E92258199A009DD996 /* ExampleViewController.swift */; };
 		B975A2EC2258199A009DD996 /* ExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B975A2EA2258199A009DD996 /* ExampleViewController.xib */; };
 		B975A2F222581B20009DD996 /* IncrementAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B975A2F122581B20009DD996 /* IncrementAction.swift */; };
-		B975A2F422581D86009DD996 /* ExampleViewReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B975A2F322581D86009DD996 /* ExampleViewReducer.swift */; };
 		B975A2F622582C72009DD996 /* IncrementByAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B975A2F522582C72009DD996 /* IncrementByAction.swift */; };
-		B975A2F922582C9B009DD996 /* ExampleViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B975A2F822582C9B009DD996 /* ExampleViewState.swift */; };
 		B9CBD195224EF57B00055C42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CBD194224EF57B00055C42 /* AppDelegate.swift */; };
 		B9CBD19C224EF57D00055C42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9CBD19B224EF57D00055C42 /* Assets.xcassets */; };
 		B9CBD19F224EF57D00055C42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9CBD19D224EF57D00055C42 /* LaunchScreen.storyboard */; };
@@ -21,17 +24,19 @@
 		B9CBD1AA224EF5E000055C42 /* ViewReducerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CBD1A9224EF5E000055C42 /* ViewReducerProtocol.swift */; };
 		B9CBD1AC224EF62800055C42 /* ActionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CBD1AB224EF62800055C42 /* ActionProtocol.swift */; };
 		B9CBD1AE224EF67400055C42 /* ActionReducerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CBD1AD224EF67400055C42 /* ActionReducerProtocol.swift */; };
-		B9CBD1B4224EF6EA00055C42 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CBD1B3224EF6EA00055C42 /* Customer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B926084022615815005667D4 /* ComplexExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexExampleViewController.swift; sourceTree = "<group>"; };
+		B926084122615815005667D4 /* ComplexExampleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComplexExampleViewController.xib; sourceTree = "<group>"; };
+		B926084722615841005667D4 /* ComplexViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexViewState.swift; sourceTree = "<group>"; };
+		B9260849226158D0005667D4 /* ComplexIncrementAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexIncrementAction.swift; sourceTree = "<group>"; };
+		B926084F22615E6E005667D4 /* SwitchCustomerAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCustomerAction.swift; sourceTree = "<group>"; };
 		B975A2E1225816A3009DD996 /* ViewReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewReducer.swift; sourceTree = "<group>"; };
 		B975A2E92258199A009DD996 /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		B975A2EA2258199A009DD996 /* ExampleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleViewController.xib; sourceTree = "<group>"; };
 		B975A2F122581B20009DD996 /* IncrementAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncrementAction.swift; sourceTree = "<group>"; };
-		B975A2F322581D86009DD996 /* ExampleViewReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewReducer.swift; sourceTree = "<group>"; };
 		B975A2F522582C72009DD996 /* IncrementByAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncrementByAction.swift; sourceTree = "<group>"; };
-		B975A2F822582C9B009DD996 /* ExampleViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewState.swift; sourceTree = "<group>"; };
 		B9CBD191224EF57B00055C42 /* ReduxTry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxTry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9CBD194224EF57B00055C42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9CBD19B224EF57D00055C42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,7 +46,6 @@
 		B9CBD1A9224EF5E000055C42 /* ViewReducerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewReducerProtocol.swift; sourceTree = "<group>"; };
 		B9CBD1AB224EF62800055C42 /* ActionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionProtocol.swift; sourceTree = "<group>"; };
 		B9CBD1AD224EF67400055C42 /* ActionReducerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionReducerProtocol.swift; sourceTree = "<group>"; };
-		B9CBD1B3224EF6EA00055C42 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B926083D226157D2005667D4 /* Complex Example */ = {
+			isa = PBXGroup;
+			children = (
+				B926083E226157F5005667D4 /* State */,
+				B926083F226157FB005667D4 /* View */,
+			);
+			path = "Complex Example";
+			sourceTree = "<group>";
+		};
+		B926083E226157F5005667D4 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				B92608442261581C005667D4 /* Actions */,
+				B926084722615841005667D4 /* ComplexViewState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		B926083F226157FB005667D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B926084022615815005667D4 /* ComplexExampleViewController.swift */,
+				B926084122615815005667D4 /* ComplexExampleViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B92608442261581C005667D4 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				B9260849226158D0005667D4 /* ComplexIncrementAction.swift */,
+				B926084F22615E6E005667D4 /* SwitchCustomerAction.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
 		B975A2ED22581AEB009DD996 /* Simple Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,8 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				B975A2F022581B0A009DD996 /* Actions */,
-				B975A2F322581D86009DD996 /* ExampleViewReducer.swift */,
-				B975A2F822582C9B009DD996 /* ExampleViewState.swift */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -112,9 +150,9 @@
 			isa = PBXGroup;
 			children = (
 				B9CBD1A0224EF57D00055C42 /* Info.plist */,
+				B926083D226157D2005667D4 /* Complex Example */,
 				B975A2ED22581AEB009DD996 /* Simple Example */,
 				B9CBD1AF224EF69A00055C42 /* ReduxBoilerplate */,
-				B9CBD1B5224EF6F900055C42 /* Domain */,
 				B9CBD1A8224EF5AC00055C42 /* NewProjectBoilerplate */,
 			);
 			path = ReduxTry;
@@ -140,14 +178,6 @@
 				B9CBD1AD224EF67400055C42 /* ActionReducerProtocol.swift */,
 			);
 			path = ReduxBoilerplate;
-			sourceTree = "<group>";
-		};
-		B9CBD1B5224EF6F900055C42 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				B9CBD1B3224EF6EA00055C42 /* Customer.swift */,
-			);
-			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B926084322615815005667D4 /* ComplexExampleViewController.xib in Resources */,
 				B9CBD19F224EF57D00055C42 /* LaunchScreen.storyboard in Resources */,
 				B9CBD19C224EF57D00055C42 /* Assets.xcassets in Resources */,
 				B975A2EC2258199A009DD996 /* ExampleViewController.xib in Resources */,
@@ -222,14 +253,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9CBD1A7224EF59100055C42 /* Store.swift in Sources */,
+				B926084222615815005667D4 /* ComplexExampleViewController.swift in Sources */,
 				B9CBD1AA224EF5E000055C42 /* ViewReducerProtocol.swift in Sources */,
+				B926084A226158D0005667D4 /* ComplexIncrementAction.swift in Sources */,
 				B975A2EB2258199A009DD996 /* ExampleViewController.swift in Sources */,
+				B926084822615841005667D4 /* ComplexViewState.swift in Sources */,
+				B926085022615E6E005667D4 /* SwitchCustomerAction.swift in Sources */,
 				B975A2F222581B20009DD996 /* IncrementAction.swift in Sources */,
 				B975A2E2225816A3009DD996 /* ViewReducer.swift in Sources */,
-				B9CBD1B4224EF6EA00055C42 /* Customer.swift in Sources */,
 				B9CBD1AC224EF62800055C42 /* ActionProtocol.swift in Sources */,
-				B975A2F422581D86009DD996 /* ExampleViewReducer.swift in Sources */,
-				B975A2F922582C9B009DD996 /* ExampleViewState.swift in Sources */,
 				B9CBD1AE224EF67400055C42 /* ActionReducerProtocol.swift in Sources */,
 				B9CBD195224EF57B00055C42 /* AppDelegate.swift in Sources */,
 				B975A2F622582C72009DD996 /* IncrementByAction.swift in Sources */,

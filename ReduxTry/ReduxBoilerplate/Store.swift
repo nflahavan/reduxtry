@@ -11,9 +11,9 @@ import Foundation
 class Store<State> {
   private var state: State
   private var viewReducer: AnyViewReducer<State>
-  private var viewRefresh: (State) -> Void
+  private var viewRefresh: (State, State) -> Void
 
-  init(initialState: State, viewReducer: AnyViewReducer<State>, viewRefresh: @escaping (State) -> Void) {
+  init(initialState: State, viewReducer: AnyViewReducer<State>, viewRefresh: @escaping (State, State) -> Void) {
     self.state = initialState
     self.viewReducer = viewReducer
     self.viewRefresh = viewRefresh
@@ -26,12 +26,9 @@ class Store<State> {
   func dispatch(action: Action) {
     // Add to queue
     // process queue async (all on one thread right now)
-    print("dispatching \(action.type)")
-    let newState = viewReducer.reduce(state: self.state, action: action)
-    // compare
-    // if newState == state { don't do anything } else {
-    self.state = newState
+    let prevState = self.state
+    self.state = viewReducer.reduce(state: prevState, action: action)
     // notify watchers
-    self.viewRefresh(self.state)
+    self.viewRefresh(prevState, self.state)
   }
 }

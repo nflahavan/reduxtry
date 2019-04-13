@@ -16,8 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     window = UIWindow(frame: UIScreen.main.bounds)
-    let rootViewController = ExampleViewController(nibName: "ExampleViewController", bundle: nil)
-    window?.rootViewController = rootViewController
+
+//    let rootViewController = ExampleViewController(nibName: "ExampleViewController", bundle: nil)
+//    window?.rootViewController = rootViewController
+
+    let complexRootViewController = ComplexExampleViewController(nibName: "ComplexExampleViewController", bundle: nil)
+    window?.rootViewController = complexRootViewController
+
     window?.makeKeyAndVisible()
 
     return true

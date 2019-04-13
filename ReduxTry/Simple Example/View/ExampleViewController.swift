@@ -21,8 +21,8 @@ class ExampleViewController: UIViewController {
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 
-    viewReducer = ExampleViewReducer()
-    store = Store(initialState: 0, viewReducer: AnyViewReducer(viewReducer), viewRefresh: refresh(count: ))
+    viewReducer = ViewReducer()
+    store = Store(initialState: 0, viewReducer: AnyViewReducer(viewReducer), viewRefresh: refresh(prevState:state:))
 
     incrementAction = IncrementAction(storeDispatchFunc: store.dispatch(action:), viewReducer: viewReducer)
     incrementByAction = IncrementByAction(storeDispatchFunc: store.dispatch(action:), viewReducer: viewReducer)
@@ -41,7 +41,7 @@ class ExampleViewController: UIViewController {
     incrementByAction.dispatch(payload: 2)
   }
   
-  func refresh(count: Int) {
-    buttonLabel.text = "button pressed \(count) times."
+  func refresh(prevState: Int, state: Int) {
+    buttonLabel.text = "button pressed \(state) times."
   }
 }
