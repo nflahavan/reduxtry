@@ -24,6 +24,8 @@
 		B9CBD1AA224EF5E000055C42 /* ViewReducerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CBD1A9224EF5E000055C42 /* ViewReducerProtocol.swift */; };
 		B9CBD1AC224EF62800055C42 /* ActionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CBD1AB224EF62800055C42 /* ActionProtocol.swift */; };
 		B9CBD1AE224EF67400055C42 /* ActionReducerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CBD1AD224EF67400055C42 /* ActionReducerProtocol.swift */; };
+		B9CF63C4226A8B9700A8A79C /* TableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF63C3226A8B9700A8A79C /* TableHelper.swift */; };
+		B9CF63C8226C093900A8A79C /* TableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF63C7226C093900A8A79C /* TableData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		B9CBD1A9224EF5E000055C42 /* ViewReducerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewReducerProtocol.swift; sourceTree = "<group>"; };
 		B9CBD1AB224EF62800055C42 /* ActionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionProtocol.swift; sourceTree = "<group>"; };
 		B9CBD1AD224EF67400055C42 /* ActionReducerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionReducerProtocol.swift; sourceTree = "<group>"; };
+		B9CF63C3226A8B9700A8A79C /* TableHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHelper.swift; sourceTree = "<group>"; };
+		B9CF63C7226C093900A8A79C /* TableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,13 @@
 			path = Actions;
 			sourceTree = "<group>";
 		};
+		B9832CF9226D2C9E0035D430 /* TableExample */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableExample;
+			sourceTree = "<group>";
+		};
 		B9CBD188224EF57A00055C42 = {
 			isa = PBXGroup;
 			children = (
@@ -150,8 +161,9 @@
 			isa = PBXGroup;
 			children = (
 				B9CBD1A0224EF57D00055C42 /* Info.plist */,
-				B926083D226157D2005667D4 /* Complex Example */,
-				B975A2ED22581AEB009DD996 /* Simple Example */,
+				B9CF63C6226C08E200A8A79C /* Examples */,
+				B9CF63C2226A8B8000A8A79C /* Helpers */,
+				B9CF63C5226C08BE00A8A79C /* Models */,
 				B9CBD1AF224EF69A00055C42 /* ReduxBoilerplate */,
 				B9CBD1A8224EF5AC00055C42 /* NewProjectBoilerplate */,
 			);
@@ -178,6 +190,32 @@
 				B9CBD1AD224EF67400055C42 /* ActionReducerProtocol.swift */,
 			);
 			path = ReduxBoilerplate;
+			sourceTree = "<group>";
+		};
+		B9CF63C2226A8B8000A8A79C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B9CF63C3226A8B9700A8A79C /* TableHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B9CF63C5226C08BE00A8A79C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B9CF63C7226C093900A8A79C /* TableData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B9CF63C6226C08E200A8A79C /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				B9832CF9226D2C9E0035D430 /* TableExample */,
+				B926083D226157D2005667D4 /* Complex Example */,
+				B975A2ED22581AEB009DD996 /* Simple Example */,
+			);
+			path = Examples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,7 +299,9 @@
 				B926085022615E6E005667D4 /* SwitchCustomerAction.swift in Sources */,
 				B975A2F222581B20009DD996 /* IncrementAction.swift in Sources */,
 				B975A2E2225816A3009DD996 /* ViewReducer.swift in Sources */,
+				B9CF63C8226C093900A8A79C /* TableData.swift in Sources */,
 				B9CBD1AC224EF62800055C42 /* ActionProtocol.swift in Sources */,
+				B9CF63C4226A8B9700A8A79C /* TableHelper.swift in Sources */,
 				B9CBD1AE224EF67400055C42 /* ActionReducerProtocol.swift in Sources */,
 				B9CBD195224EF57B00055C42 /* AppDelegate.swift in Sources */,
 				B975A2F622582C72009DD996 /* IncrementByAction.swift in Sources */,
