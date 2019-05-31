@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B907F9F3229F04A60010A377 /* TableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B907F9F2229F04A60010A377 /* TableHelper.swift */; };
 		B926084222615815005667D4 /* ComplexExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B926084022615815005667D4 /* ComplexExampleViewController.swift */; };
 		B926084322615815005667D4 /* ComplexExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B926084122615815005667D4 /* ComplexExampleViewController.xib */; };
 		B926084822615841005667D4 /* ComplexViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B926084722615841005667D4 /* ComplexViewState.swift */; };
 		B926084A226158D0005667D4 /* ComplexIncrementAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9260849226158D0005667D4 /* ComplexIncrementAction.swift */; };
 		B926085022615E6E005667D4 /* SwitchCustomerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B926084F22615E6E005667D4 /* SwitchCustomerAction.swift */; };
+		B94E0F6122A0B4DD005B7094 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E0F5F22A0B4DD005B7094 /* TableViewController.swift */; };
+		B94E0F6222A0B4DD005B7094 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94E0F6022A0B4DD005B7094 /* TableViewController.xib */; };
+		B94E0F6422A0B605005B7094 /* TableViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E0F6322A0B605005B7094 /* TableViewState.swift */; };
+		B94E0F6C22A1CA3B005B7094 /* RandomizeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E0F6B22A1CA3B005B7094 /* RandomizeAction.swift */; };
 		B975A2E2225816A3009DD996 /* ViewReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B975A2E1225816A3009DD996 /* ViewReducer.swift */; };
 		B975A2EB2258199A009DD996 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B975A2E92258199A009DD996 /* ExampleViewController.swift */; };
 		B975A2EC2258199A009DD996 /* ExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B975A2EA2258199A009DD996 /* ExampleViewController.xib */; };
@@ -24,16 +29,20 @@
 		B9CBD1AA224EF5E000055C42 /* ViewReducerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CBD1A9224EF5E000055C42 /* ViewReducerProtocol.swift */; };
 		B9CBD1AC224EF62800055C42 /* ActionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CBD1AB224EF62800055C42 /* ActionProtocol.swift */; };
 		B9CBD1AE224EF67400055C42 /* ActionReducerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CBD1AD224EF67400055C42 /* ActionReducerProtocol.swift */; };
-		B9CF63C4226A8B9700A8A79C /* TableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF63C3226A8B9700A8A79C /* TableHelper.swift */; };
 		B9CF63C8226C093900A8A79C /* TableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF63C7226C093900A8A79C /* TableData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B907F9F2229F04A60010A377 /* TableHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHelper.swift; sourceTree = "<group>"; };
 		B926084022615815005667D4 /* ComplexExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexExampleViewController.swift; sourceTree = "<group>"; };
 		B926084122615815005667D4 /* ComplexExampleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComplexExampleViewController.xib; sourceTree = "<group>"; };
 		B926084722615841005667D4 /* ComplexViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexViewState.swift; sourceTree = "<group>"; };
 		B9260849226158D0005667D4 /* ComplexIncrementAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexIncrementAction.swift; sourceTree = "<group>"; };
 		B926084F22615E6E005667D4 /* SwitchCustomerAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCustomerAction.swift; sourceTree = "<group>"; };
+		B94E0F5F22A0B4DD005B7094 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		B94E0F6022A0B4DD005B7094 /* TableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
+		B94E0F6322A0B605005B7094 /* TableViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewState.swift; sourceTree = "<group>"; };
+		B94E0F6B22A1CA3B005B7094 /* RandomizeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomizeAction.swift; sourceTree = "<group>"; };
 		B975A2E1225816A3009DD996 /* ViewReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewReducer.swift; sourceTree = "<group>"; };
 		B975A2E92258199A009DD996 /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		B975A2EA2258199A009DD996 /* ExampleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleViewController.xib; sourceTree = "<group>"; };
@@ -48,7 +57,6 @@
 		B9CBD1A9224EF5E000055C42 /* ViewReducerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewReducerProtocol.swift; sourceTree = "<group>"; };
 		B9CBD1AB224EF62800055C42 /* ActionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionProtocol.swift; sourceTree = "<group>"; };
 		B9CBD1AD224EF67400055C42 /* ActionReducerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionReducerProtocol.swift; sourceTree = "<group>"; };
-		B9CF63C3226A8B9700A8A79C /* TableHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHelper.swift; sourceTree = "<group>"; };
 		B9CF63C7226C093900A8A79C /* TableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,8 +145,36 @@
 		B9832CF9226D2C9E0035D430 /* TableExample */ = {
 			isa = PBXGroup;
 			children = (
+				B9832CFB226D4B6F0035D430 /* State */,
+				B9832CFA226D4B680035D430 /* View */,
 			);
 			path = TableExample;
+			sourceTree = "<group>";
+		};
+		B9832CFA226D4B680035D430 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B94E0F5F22A0B4DD005B7094 /* TableViewController.swift */,
+				B94E0F6022A0B4DD005B7094 /* TableViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B9832CFB226D4B6F0035D430 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				B9832CFC226D4B880035D430 /* Actions */,
+				B94E0F6322A0B605005B7094 /* TableViewState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		B9832CFC226D4B880035D430 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				B94E0F6B22A1CA3B005B7094 /* RandomizeAction.swift */,
+			);
+			path = Actions;
 			sourceTree = "<group>";
 		};
 		B9CBD188224EF57A00055C42 = {
@@ -160,7 +196,6 @@
 		B9CBD193224EF57B00055C42 /* ReduxTry */ = {
 			isa = PBXGroup;
 			children = (
-				B9CBD1A0224EF57D00055C42 /* Info.plist */,
 				B9CF63C6226C08E200A8A79C /* Examples */,
 				B9CF63C2226A8B8000A8A79C /* Helpers */,
 				B9CF63C5226C08BE00A8A79C /* Models */,
@@ -173,6 +208,7 @@
 		B9CBD1A8224EF5AC00055C42 /* NewProjectBoilerplate */ = {
 			isa = PBXGroup;
 			children = (
+				B9CBD1A0224EF57D00055C42 /* Info.plist */,
 				B9CBD194224EF57B00055C42 /* AppDelegate.swift */,
 				B9CBD19B224EF57D00055C42 /* Assets.xcassets */,
 				B9CBD19D224EF57D00055C42 /* LaunchScreen.storyboard */,
@@ -195,7 +231,7 @@
 		B9CF63C2226A8B8000A8A79C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				B9CF63C3226A8B9700A8A79C /* TableHelper.swift */,
+				B907F9F2229F04A60010A377 /* TableHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -279,6 +315,7 @@
 				B926084322615815005667D4 /* ComplexExampleViewController.xib in Resources */,
 				B9CBD19F224EF57D00055C42 /* LaunchScreen.storyboard in Resources */,
 				B9CBD19C224EF57D00055C42 /* Assets.xcassets in Resources */,
+				B94E0F6222A0B4DD005B7094 /* TableViewController.xib in Resources */,
 				B975A2EC2258199A009DD996 /* ExampleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +328,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9CBD1A7224EF59100055C42 /* Store.swift in Sources */,
+				B94E0F6C22A1CA3B005B7094 /* RandomizeAction.swift in Sources */,
+				B907F9F3229F04A60010A377 /* TableHelper.swift in Sources */,
 				B926084222615815005667D4 /* ComplexExampleViewController.swift in Sources */,
 				B9CBD1AA224EF5E000055C42 /* ViewReducerProtocol.swift in Sources */,
 				B926084A226158D0005667D4 /* ComplexIncrementAction.swift in Sources */,
@@ -300,11 +339,12 @@
 				B975A2F222581B20009DD996 /* IncrementAction.swift in Sources */,
 				B975A2E2225816A3009DD996 /* ViewReducer.swift in Sources */,
 				B9CF63C8226C093900A8A79C /* TableData.swift in Sources */,
+				B94E0F6122A0B4DD005B7094 /* TableViewController.swift in Sources */,
 				B9CBD1AC224EF62800055C42 /* ActionProtocol.swift in Sources */,
-				B9CF63C4226A8B9700A8A79C /* TableHelper.swift in Sources */,
 				B9CBD1AE224EF67400055C42 /* ActionReducerProtocol.swift in Sources */,
 				B9CBD195224EF57B00055C42 /* AppDelegate.swift in Sources */,
 				B975A2F622582C72009DD996 /* IncrementByAction.swift in Sources */,
+				B94E0F6422A0B605005B7094 /* TableViewState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,7 +484,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F73VXQF925;
-				INFOPLIST_FILE = ReduxTry/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ReduxTry/NewProjectBoilerplate/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -462,7 +502,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F73VXQF925;
-				INFOPLIST_FILE = ReduxTry/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ReduxTry/NewProjectBoilerplate/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,56 +1,68 @@
-//
-//  TableHelper.swift
-//  ReduxTry
-//
-//  Created by NFlahavan on 4/19/19.
+//  Created by NFlahavan on 5/29/19.
 //  Copyright © 2019 NFlahavan. All rights reserved.
 //
 
 import UIKit
 
-enum TableHelper {
+class TableHelper {
 
-  static func update(_ table: UITableView,
-                     from prevTableData: Set<TableData>,
-                     to currTableData: Set<TableData>,
-                     using updateFunc: (UITableView, TableData, TableData) -> Void) {
-    let prunedPrevTableData = prevTableData.intersection(currTableData)
+  private(set) weak var table: UITableView!
 
-    let deletionIndices = prevTableData.subtracting(prunedPrevTableData).map { item in return item.indexPath }
-    let insertionIndices = currTableData.subtracting(prunedPrevTableData).map { item in return item.indexPath }
+  let updateFunc: (UITableView, TableData, TableData) -> Void
 
-    let indexPathSortPredicate = { (lhs: TableData, rhs: TableData) -> Bool in lhs.indexPath < rhs.indexPath }
+  private var rowsToDelete: [IndexPath] = []
+  private var rowsToInsert: [IndexPath] = []
+  private var rowsToMove: [(oldIndex: IndexPath, newIndex: IndexPath)] = []
+  private var batchUpdates: () -> Void {
 
-    let prunedAndSortedPrevTableData = prunedPrevTableData.sorted(by: indexPathSortPredicate)
-    let prunedAndSortedCurrTableData = currTableData.intersection(prevTableData).sorted(by: indexPathSortPredicate)
-    var moveIndices: [(from: IndexPath, to: IndexPath)] = []
+    return { [weak self] in
 
-    for index in prunedAndSortedPrevTableData.indices {
-      let prevItem = prunedAndSortedPrevTableData[index]
-      let currItem: TableData
+      guard let self = self else { return }
 
-      if prunedAndSortedCurrTableData[index] != prevItem {
-        guard let currItemIndex = prunedAndSortedCurrTableData.firstIndex(of: prevItem) else {
-          fatalError("prunedAndSortedCurrTableData doesn't contain \(prevItem).")
-        }
+      self.table.deleteRows(at: self.rowsToDelete, with: .right)
+      self.table.insertRows(at: self.rowsToInsert, with: .left)
 
-        currItem = prunedAndSortedCurrTableData[currItemIndex]
-        moveIndices.append((from: prevItem.indexPath, to: currItem.indexPath))
-      } else {
-        currItem = prunedAndSortedCurrTableData[index]
+      for row in self.rowsToMove {
+
+        self.table.moveRow(at: row.oldIndex, to: row.newIndex)
+
+      }
+    }
+  }
+
+  init(table: UITableView, updateFunc: @escaping (UITableView, TableData, TableData) -> Void) {
+
+    self.table = table
+    self.updateFunc = updateFunc
+
+  }
+
+  func updateTable(from prevTableData: Set<TableData>, to currTableData: Set<TableData>, completionHandler: @escaping (Bool) -> Void) {
+
+    let rowsToDeleteOrInsert = currTableData.symmetricDifference(prevTableData)
+    let prevRowsStickingAround = prevTableData.intersection(currTableData).sorted()
+    let currRowsStickingAround = currTableData.intersection(prevTableData).sorted()
+
+    rowsToDelete = rowsToDeleteOrInsert.intersection(prevTableData).map { data in return data.indexPath }
+    rowsToInsert = rowsToDeleteOrInsert.intersection(currTableData).map { data in return data.indexPath }
+    rowsToMove = []
+
+    for index in currRowsStickingAround.indices {
+
+      let prevRow = prevRowsStickingAround[index]
+      let currRow = currRowsStickingAround[index]
+
+      if prevRow.indexPath != currRow.indexPath {
+
+        rowsToMove.append((oldIndex: prevRow.indexPath, currRow.indexPath))
+
       }
 
-      updateFunc(table, prevItem, currItem)
+      updateFunc(table, prevRow, currRow)
+
     }
 
-    table.beginUpdates()
-    table.deleteRows(at: deletionIndices, with: .automatic)
+    table.performBatchUpdates(batchUpdates, completion: completionHandler)
 
-    for item in moveIndices {
-      table.moveRow(at: item.from, to: item.to)
-    }
-
-    table.insertRows(at: insertionIndices, with: .automatic)
-    table.endUpdates()
   }
 }
