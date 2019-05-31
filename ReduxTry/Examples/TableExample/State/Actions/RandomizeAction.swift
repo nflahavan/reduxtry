@@ -28,7 +28,7 @@ struct RandomizeAction {
 
         var tableDatas: [TableData] = []
 
-        for index in 0...randomNumber {
+        for index in 0..<randomNumber {
 
           let emoji = emojis.randomElement()!
           let tableData = TableData(indexPath: IndexPath(row: index, section: 0), data: emoji)
