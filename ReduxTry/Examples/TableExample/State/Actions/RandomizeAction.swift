@@ -26,12 +26,12 @@ struct RandomizeAction {
 
         let randomNumber = Int.random(in: 0...10)
 
-        var tableDatas: [TableData] = []
+        var tableDatas: [TableRowData] = []
 
         for index in 0..<randomNumber {
 
           let emoji = emojis.randomElement()!
-          let tableData = TableData(indexPath: IndexPath(row: index, section: 0), data: emoji)
+          let tableData = TableRowData(indexPath: IndexPath(row: index, section: 0), data: emoji)
           tableDatas.append(tableData)
 
         }

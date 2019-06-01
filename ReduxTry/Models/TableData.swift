@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct TableData {
+struct TableRowData {
 
   let id: UUID
   var indexPath: IndexPath
@@ -23,23 +23,27 @@ struct TableData {
   }
 }
 
-extension TableData: Hashable {
+extension TableRowData: Hashable {
 
-  static func == (lhs: TableData, rhs: TableData) -> Bool {
+  static func == (lhs: TableRowData, rhs: TableRowData) -> Bool {
 
     return lhs.id == rhs.id
-    
+
+  }
+
+  func hash(into hasher: inout Hasher) {
+
+    hasher.combine(id)
+
   }
 
 }
 
-extension TableData: Comparable {
-  static func < (lhs: TableData, rhs: TableData) -> Bool {
+extension TableRowData: Comparable {
+  static func < (lhs: TableRowData, rhs: TableRowData) -> Bool {
 
     return lhs.indexPath < rhs.indexPath
 
   }
-
-
 
 }

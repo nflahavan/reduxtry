@@ -17,6 +17,7 @@
 		B94E0F6222A0B4DD005B7094 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94E0F6022A0B4DD005B7094 /* TableViewController.xib */; };
 		B94E0F6422A0B605005B7094 /* TableViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E0F6322A0B605005B7094 /* TableViewState.swift */; };
 		B94E0F6C22A1CA3B005B7094 /* RandomizeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E0F6B22A1CA3B005B7094 /* RandomizeAction.swift */; };
+		B94E0F6E22A1ED9E005B7094 /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E0F6D22A1ED9E005B7094 /* LoadData.swift */; };
 		B975A2E2225816A3009DD996 /* ViewReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B975A2E1225816A3009DD996 /* ViewReducer.swift */; };
 		B975A2EB2258199A009DD996 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B975A2E92258199A009DD996 /* ExampleViewController.swift */; };
 		B975A2EC2258199A009DD996 /* ExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B975A2EA2258199A009DD996 /* ExampleViewController.xib */; };
@@ -43,6 +44,7 @@
 		B94E0F6022A0B4DD005B7094 /* TableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
 		B94E0F6322A0B605005B7094 /* TableViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewState.swift; sourceTree = "<group>"; };
 		B94E0F6B22A1CA3B005B7094 /* RandomizeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomizeAction.swift; sourceTree = "<group>"; };
+		B94E0F6D22A1ED9E005B7094 /* LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadData.swift; sourceTree = "<group>"; };
 		B975A2E1225816A3009DD996 /* ViewReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewReducer.swift; sourceTree = "<group>"; };
 		B975A2E92258199A009DD996 /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		B975A2EA2258199A009DD996 /* ExampleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleViewController.xib; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				B94E0F6B22A1CA3B005B7094 /* RandomizeAction.swift */,
+				B94E0F6D22A1ED9E005B7094 /* LoadData.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				B9CF63C8226C093900A8A79C /* TableData.swift in Sources */,
 				B94E0F6122A0B4DD005B7094 /* TableViewController.swift in Sources */,
 				B9CBD1AC224EF62800055C42 /* ActionProtocol.swift in Sources */,
+				B94E0F6E22A1ED9E005B7094 /* LoadData.swift in Sources */,
 				B9CBD1AE224EF67400055C42 /* ActionReducerProtocol.swift in Sources */,
 				B9CBD195224EF57B00055C42 /* AppDelegate.swift in Sources */,
 				B975A2F622582C72009DD996 /* IncrementByAction.swift in Sources */,

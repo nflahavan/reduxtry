@@ -9,5 +9,5 @@
 import Foundation
 
 struct TableViewState {
-  var tableData: [TableData]
+  var tableData: [TableRowData]
 }

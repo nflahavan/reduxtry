@@ -8,7 +8,7 @@ class TableHelper {
 
   private(set) weak var table: UITableView!
 
-  let updateFunc: (UITableView, TableData, TableData) -> Void
+  let updateFunc: (UITableView, TableRowData, TableRowData) -> Void
 
   private var rowsToDelete: [IndexPath] = []
   private var rowsToInsert: [IndexPath] = []
@@ -30,14 +30,14 @@ class TableHelper {
     }
   }
 
-  init(table: UITableView, updateFunc: @escaping (UITableView, TableData, TableData) -> Void) {
+  init(table: UITableView, updateFunc: @escaping (UITableView, TableRowData, TableRowData) -> Void) {
 
     self.table = table
     self.updateFunc = updateFunc
 
   }
 
-  func updateTable(from prevTableData: Set<TableData>, to currTableData: Set<TableData>, completionHandler: @escaping (Bool) -> Void) {
+  func updateTable(from prevTableData: Set<TableRowData>, to currTableData: Set<TableRowData>, completionHandler: @escaping (Bool) -> Void) {
 
     let rowsToDeleteOrInsert = currTableData.symmetricDifference(prevTableData)
     let prevRowsStickingAround = prevTableData.intersection(currTableData).sorted()

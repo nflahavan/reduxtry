@@ -13,6 +13,7 @@ class TableViewController: UITableViewController {
   private var viewReducer: ViewReducer<TableViewState>!
   private var store: Store<TableViewState>!
   private var randomizeAction: RandomizeAction!
+  private var loadDataAction: LoadDataAction!
   private var tableHelper: TableHelper!
 
   override func viewDidLoad() {
@@ -43,6 +44,7 @@ class TableViewController: UITableViewController {
     viewReducer = ViewReducer()
     store = Store(initialState: initialViewState, viewReducer: AnyViewReducer(viewReducer), viewRefresh: refresh(prevState:state:))
     randomizeAction = RandomizeAction(storeDispatchFunc: store.dispatch(action:), viewReducer: viewReducer)
+    loadDataAction = LoadDataAction(storeDispatchFunc: store.dispatch(action:), viewReducer: viewReducer)
 
   }
 
@@ -56,7 +58,7 @@ class TableViewController: UITableViewController {
   func addButtonToNavigationController() {
 
     let button = UIButton(type: .roundedRect)
-    button.setTitle("Randomize", for: .normal)
+    button.setTitle("load data", for: .normal)
 
     button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
 
@@ -67,7 +69,8 @@ class TableViewController: UITableViewController {
   @objc func buttonTapped() {
 
     print("button tapped.")
-    randomizeAction.dispatch()
+    //randomizeAction.dispatch()
+    loadDataAction.dispatch()
 
   }
 }
@@ -90,7 +93,7 @@ extension TableViewController {
 
     let tableDatas = store.getstate().tableData
     let tableData = tableDatas.first(where: { tableData in return tableData.indexPath == indexPath })
-    let emoji = tableData?.data as? String.Element
+    let emoji = tableData?.data as? String
 
     if let emoji = emoji {
 
